@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff0f5">
+    <meta name="description" content="Một tấm thiệp nhỏ gửi lời chúc yêu thương nhân ngày Phụ nữ Việt Nam 20/10.">
+    <title>Chúc mừng ngày 20/10 ♡</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="stage" aria-label="Thiệp chúc mừng ngày Phụ nữ Việt Nam 20/10">
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♫ Bật nhạc</button>
+      <span class="decoration decoration-one" aria-hidden="true">♡</span>
+      <span class="decoration decoration-two" aria-hidden="true">✿</span>
+      <span class="decoration decoration-three" aria-hidden="true">✧</span>
+      <span class="decoration decoration-four" aria-hidden="true">♡</span>
+      <span class="scene-sticker sticker-flower" aria-hidden="true">🌷</span>
+      <span class="scene-sticker sticker-paw" aria-hidden="true">🐾</span>
+      <span class="scene-sticker sticker-heart" aria-hidden="true">♥</span>
+      <span class="scene-sticker sticker-sparkle" aria-hidden="true">✧</span>
+      <span class="scene-sticker sticker-ribbon" aria-hidden="true">🎀</span>
+      <span class="scene-date" aria-hidden="true"><strong>20</strong><span>tháng 10</span></span>
+      <span class="scene-note" aria-hidden="true">Gửi chút yêu thương ♡</span>
+      <div class="paw-burst" id="pawBurst" aria-hidden="true"></div>
+      <div class="rose-burst" id="roseBurst" aria-hidden="true"></div>
+
+      <section class="envelope-wrap" id="envelopeWrap" aria-label="Phong thư">
+        <button
+          class="envelope"
+          id="envelope"
+          type="button"
+          aria-label="Nhấn để mở thư chúc mừng 20/10"
+          aria-expanded="false"
+          aria-controls="greetingCard"
+        >
+          <span class="envelope-back" aria-hidden="true"></span>
+          <span class="paper" aria-hidden="true"><span>Một lời chúc nhỏ ♡</span></span>
+          <span class="envelope-front" aria-hidden="true"></span>
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="seal" aria-hidden="true">♡</span>
+          <span class="envelope-hearts" aria-hidden="true">
+            <span>♡</span>
+            <span>♥</span>
+            <span>♡</span>
+            <span>♥</span>
+            <span>♡</span>
+          </span>
+        </button>
+        <p class="dedication">Một bức tâm thư chỉ có người có một tâm hồn đẹp mới có thể mở ra được</p>
+      </section>
+
+      <article class="card" id="greetingCard" aria-labelledby="cardTitle" hidden>
+        <section class="message">
+          <p class="eyebrow">Gửi bạn yêu thương</p>
+          <h1 id="cardTitle" tabindex="-1">Chúc mừng <span>20/10!</span></h1>
+          <p class="greeting">Chúc bạn luôn rạng rỡ như hoa, dịu dàng với chính mình và gặp thật nhiều điều tử tế. Mong mỗi ngày của bạn đều có niềm vui, tiếng cười và những người chân thành ở bên.</p>
+          <span class="heart" aria-hidden="true">♡</span>
+          <div class="actions">
+            <button class="restart" id="restart" type="button" disabled>Gấp thư lại ♡</button>
+            <div class="gift-action-slot">
+              <button class="gift-trigger" id="giftTrigger" type="button" aria-expanded="false" aria-controls="giftPanel" hidden>🎁 Mở quà</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="art">
+          <img class="letter-cat" src="assets/letter-cat.png" alt="Chú mèo đội mũ rộng vành, thổi kèn trumpet và cầm một bó hoa đỏ trắng" width="712" height="784" decoding="async">
+          <span class="art-caption" aria-hidden="true">Đôi lời muốn nói ♡</span>
+        </div>
+
+        <section class="gift-panel" id="giftPanel" role="dialog" aria-modal="true" aria-labelledby="giftTitle" aria-describedby="giftMessage" hidden>
+          <div class="gift-dialog">
+            <h2 class="sr-only" id="giftTitle">Một món quà muốn gửi bạn</h2>
+            <div class="gift-scene" id="giftScene">
+              <span class="gift-sparkle sparkle-one" aria-hidden="true">✦</span>
+              <span class="gift-sparkle sparkle-two" aria-hidden="true">♡</span>
+              <span class="gift-sparkle sparkle-three" aria-hidden="true">✧</span>
+              <span class="gift-sparkle sparkle-four" aria-hidden="true">✿</span>
+              <svg class="gift-title-arc" viewBox="0 0 490 135" aria-hidden="true">
+                <defs>
+                  <path id="giftTitleArcPath" d="M 30 112 Q 245 -20 460 112"></path>
+                </defs>
+                <text>
+                  <textPath href="#giftTitleArcPath" startOffset="50%" text-anchor="middle">Một món quà muốn gửi bạn</textPath>
+                </text>
+              </svg>
+              <img class="gift-kitten" id="giftKitten" src="assets/kitten-gift.png" alt="Mèo con đeo kính ôm bó hoa hồng, trồi lên từ hộp quà" width="573" height="928" decoding="async">
+              <div class="gift-box" id="giftBox" aria-hidden="true">
+                <div class="gift-lid" id="giftLid"><span class="lid-ribbon"></span><span class="bow-loop bow-left"></span><span class="bow-loop bow-right"></span></div>
+                <div class="gift-base"><span class="base-ribbon"></span><span class="gift-heart">♡</span></div>
+              </div>
+            </div>
+            <p class="gift-message" id="giftMessage">Một bó hoa dành tặng bạn 🌷 Chúc bạn luôn rạng rỡ và hạnh phúc!</p>
+            <div class="gift-actions">
+              <button class="gift-close" id="giftClose" type="button" hidden>Đóng quà ♡</button>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <p class="sr-only" id="status" aria-live="polite">Phong thư đang chờ bạn mở.</p>
+    </main>
+  </body>
+</html>
